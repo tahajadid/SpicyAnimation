@@ -56,7 +56,7 @@ class SpicyAnimation {
         animator.setEvaluator(ArgbEvaluator())
 
         // how many times the animation will be repeated
-        animator.repeatCount = toBeRepeated
+        animator.repeatCount = toBeRepeated - 1
 
         // start the animation
         animator.start()

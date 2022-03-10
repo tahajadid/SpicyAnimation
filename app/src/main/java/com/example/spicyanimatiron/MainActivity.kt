@@ -11,25 +11,35 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val blinkButton = findViewById<Button>(R.id.blink_button)
+        val blinkOneButton = findViewById<Button>(R.id.blink_one_button)
+        val blinkManyButton = findViewById<Button>(R.id.blink_many_button)
         val infiniteButton = findViewById<Button>(R.id.infinite_button)
 
-        blinkButton.setOnClickListener {
+        blinkOneButton.setOnClickListener {
             SpicyAnimation().blinkView(
-                blinkButton,
+                blinkOneButton,
                 800,
                 Color.parseColor("#0F43F4"),
                 Color.parseColor("#A0A34F")
             )
         }
 
-        infiniteButton.setOnClickListener {
+        blinkManyButton.setOnClickListener {
             SpicyAnimation().blinkView(
-                infiniteButton,
+                blinkManyButton,
                 1000,
                 Color.parseColor("#80A314"),
                 Color.parseColor("#A0F348"),
                 3
+            )
+        }
+
+        infiniteButton.setOnClickListener {
+            SpicyAnimation().blinkViewInfinite(
+                infiniteButton,
+                1000,
+                Color.parseColor("#80A314"),
+                Color.parseColor("#A0F348")
             )
         }
     }

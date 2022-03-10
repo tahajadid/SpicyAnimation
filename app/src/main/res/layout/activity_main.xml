@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/blink_button"
+        android:id="@+id/blink_one_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
@@ -30,8 +30,18 @@
         android:id="@+id/infinite_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="16dp"
         android:text="Blink Infinite"
+        app:layout_constraintBottom_toTopOf="@+id/rectangular_road"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/blink_many_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:text="Blink Many Timee"
         app:layout_constraintBottom_toTopOf="@+id/rectangular_road"
         app:layout_constraintStart_toStartOf="parent" />
 
