@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         val blinkOneButton = findViewById<Button>(R.id.blink_one_button)
         val blinkManyButton = findViewById<Button>(R.id.blink_many_button)
         val infiniteButton = findViewById<Button>(R.id.infinite_button)
+        val rectangularRoad = findViewById<Button>(R.id.rectangular_road)
 
         blinkOneButton.setOnClickListener {
             SpicyAnimation().blinkView(
@@ -42,5 +43,7 @@ class MainActivity : AppCompatActivity() {
                 Color.parseColor("#A0F348")
             )
         }
+
+        SpicyAnimation().fadeToRight(rectangularRoad, 1500)
     }
 }
