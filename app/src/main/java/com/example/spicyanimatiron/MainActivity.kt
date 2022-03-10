@@ -44,6 +44,8 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
-        SpicyAnimation().fadeToRight(rectangularRoad, 1500)
+        rectangularRoad.setOnClickListener {
+            SpicyAnimation().rectangularRoad(rectangularRoad, 50F, 500, true)
+        }
     }
 }

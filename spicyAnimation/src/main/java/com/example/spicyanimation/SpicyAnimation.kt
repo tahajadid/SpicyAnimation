@@ -1,9 +1,6 @@
 package com.example.spicyanimation
 
-import android.animation.ArgbEvaluator
-import android.animation.ObjectAnimator
 import android.view.View
-import android.view.animation.Animation
 
 /**
  * to parse your color you can use getResources().getColor(R.color.YOUR_COLOR) in case
@@ -18,106 +15,47 @@ class SpicyAnimation {
      * by default the animation will be repeated one time
      */
     fun blinkView(view: View, appearanceTime: Long, firstColor: Int, secondColor: Int) {
-
-        // adding the background color
-        val animator: ObjectAnimator = ObjectAnimator.ofInt(
-            view, "backgroundColor", firstColor, secondColor
-        )
-
-        // set the duration for each color time with Ms
-        animator.duration = appearanceTime
-
-        /**
-         * evaluator can be used to perform type interpolation between integer values that
-         * represent ARGB colors.
-         */
-        animator.setEvaluator(ArgbEvaluator())
-
-        // color will be shown in absolute (one time)
-        animator.repeatCount = Animation.ABSOLUTE
-
-        // start the animation
-        animator.start()
+        Blink.blinkView(view, appearanceTime, firstColor, secondColor)
     }
 
     /**
      * when the user add the arg of how many times the animation will be repeated
      */
     fun blinkView(view: View, appearanceTime: Long, firstColor: Int, secondColor: Int, toBeRepeated: Int) {
-
-        // adding the background color
-        val animator: ObjectAnimator = ObjectAnimator.ofInt(
-            view, "backgroundColor", firstColor, secondColor
-        )
-
-        // set the duration for each color time with Ms
-        animator.duration = appearanceTime
-
-        animator.setEvaluator(ArgbEvaluator())
-
-        // how many times the animation will be repeated
-        animator.repeatCount = toBeRepeated - 1
-
-        // start the animation
-        animator.start()
+        Blink.blinkView(view, appearanceTime, firstColor, secondColor, toBeRepeated)
     }
 
     fun blinkViewInfinite(view: View, appearanceTime: Long, firstColor: Int, secondColor: Int) {
-
-        // adding the background color
-        val animator: ObjectAnimator = ObjectAnimator.ofInt(
-            view, "backgroundColor", firstColor, secondColor
-        )
-
-        // set the duration for each color time with Ms
-        animator.duration = appearanceTime
-
-        animator.setEvaluator(ArgbEvaluator())
-
-        // color will be shown in Infinite Mode
-        animator.repeatCount = Animation.INFINITE
-
-        // start the animation
-        animator.start()
+        Blink.blinkViewInfinite(view, appearanceTime, firstColor, secondColor)
     }
 
-    fun fadeToUp(view: View, duration: Long) {
-
-        // Set button alpha to the 0
-        view.alpha = 0F
-        view.translationY = 50F
-
-        // Animate the alpha value to 1F and set duration
-        view.animate().alpha(1F).translationYBy(-50F).setDuration(duration)
+    /**
+     * funtions to make a fade animation with each direction
+     * space wich is a Float represent pixels
+     * duration wich is a Long that represent time of each animation
+     */
+    fun fadeToUp(view: View, spaceWithPixel: Float, duration: Long) {
+        SimpleFade.fadeToUp(view, spaceWithPixel, duration)
     }
 
-    fun fadeToDown(view: View, duration: Long) {
-
-        // Set button alpha to the 0
-        view.alpha = 0F
-        view.translationY = -50F
-
-        // Animate the alpha value to 1F and set duration
-        view.animate().alpha(1F).translationYBy(50F).setDuration(duration)
+    fun fadeToDown(view: View, spaceWithPixel: Float, duration: Long) {
+        SimpleFade.fadeToDown(view, spaceWithPixel, duration)
     }
 
-    fun fadeToLeft(view: View, duration: Long) {
-
-        // Set button alpha to the 0
-        view.alpha = 0F
-        view.translationX = 50F
-
-        // Animate the alpha value to 1F and set duration
-        view.animate().alpha(1F).translationXBy(-50F).setDuration(duration)
+    fun fadeToLeft(view: View, spaceWithPixel: Float, duration: Long) {
+        SimpleFade.fadeToLeft(view, spaceWithPixel, duration)
     }
 
-    fun fadeToRight(view: View, duration: Long) {
+    fun fadeToRight(view: View, spaceWithPixel: Float, duration: Long) {
+        SimpleFade.fadeToRight(view, spaceWithPixel, duration)
+    }
 
-        // Set button alpha to the 0
-        view.alpha = 0F
-        view.translationX = -50F
-
-        // Animate the alpha value to 1F and set duration
-        view.animate().alpha(1F).translationXBy(50F).setDuration(duration)
+    /**
+     * funtion to make rectangular rotation
+     * space wich is a Float represent pixels
+     * duration wich is a Long that represent time of each animation
+     */
+    fun rectangularRoad(view: View, spaceWithPixel: Float, duration: Long, isFade: Boolean) {
+        RectangularRoad.start(view, spaceWithPixel, duration, isFade)
     }
 }
