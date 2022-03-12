@@ -5,3 +5,16 @@
 In some application, we need to get someone's attention, and not just by the view's position we make a sense, may we need to add color to blink a view or make some animation on it
 
 ## Demo
+
+
+## Setup
+Add it in your root build.gradle at the end of repositories:
+
+```groovy
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+}
+```
