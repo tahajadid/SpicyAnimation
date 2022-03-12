@@ -27,6 +27,8 @@ dependencies {
 
 ## Demo
 
+![Demonstration](/demo.mp4)
+
 ## Licence
 
 [LICENCE](https://github.com/tahajadid/SpicyAnimation/blob/develop/LICENSE)
