@@ -27,7 +27,7 @@ dependencies {
 
 ## Demo
 
-![Demonstration](/demo.mp4)
+![Demonstration](/demo.gif)
 
 ## Licence
 
