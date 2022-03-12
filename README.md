@@ -27,7 +27,7 @@ dependencies {
 
 ## Demo
 
-![Demonstration]<img src="/demo.gif" width="200" height="500"/>
+<img src="/demo.gif" width="230" height="500"/>
 
 ## Licence
 
