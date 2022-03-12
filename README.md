@@ -26,3 +26,7 @@ dependencies {
 ```
 
 ## Demo
+
+## Licence
+
+[LICENCE](https://github.com/tahajadid/SpicyAnimation/blob/develop/LICENSE)
