@@ -29,6 +29,47 @@ dependencies {
 
 <img src="/demo.gif" width="230" height="500"/>
 
+## How to use it
+
+### Blibk a view
+
+One time Blink
+```groovy
+SpicyAnimation().blinkView(
+        blinkOneButton,
+	800,
+        Color.parseColor("#c85a54")
+	Color.parseColor("#ff8a80")
+)
+```
+
+Infinit Blink
+```groovy
+SpicyAnimation().blinkViewInfinite(
+        infiniteButton,
+	400,
+        Color.parseColor("#c85a54")
+	Color.parseColor("#ff8a80")
+)
+```
+
+### Fade a view
+
+Fade to Down & Right
+```groovy
+SpicyAnimation().fadeToDown(fadeDownButton, 50F, 1000)
+SpicyAnimation().fadeToRight(fadeRightButton, 50F, 3000)
+```
+
+
+### Rotate a view
+
+Fade to Down & Right
+```groovy
+SpicyAnimation().rectangularRoad(rectangularRotationOne, 100F, 500, false) // true if you want a fade in animation start/end
+```
+
+
 ## Licence
 
 [LICENCE](https://github.com/tahajadid/SpicyAnimation/blob/develop/LICENSE)
