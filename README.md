@@ -61,6 +61,8 @@ SpicyAnimation().fadeToDown(fadeDownButton, 50F, 1000)
 SpicyAnimation().fadeToRight(fadeRightButton, 50F, 3000)
 ```
 
+You can use other stuff by building this project and discovering the sample
+[sample](https://github.com/tahajadid/SpicyAnimation/tree/develop/app)
 
 ### Rotate a view
 
