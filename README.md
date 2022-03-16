@@ -21,7 +21,7 @@ Add the dependency
 
 ```groovy
 dependencies {
-	implementation 'com.github.tahajadid:SpicyAnimation:Tag'
+	implementation 'com.github.tahajadid:SpicyAnimation:0.1.0'
 }
 ```
 
