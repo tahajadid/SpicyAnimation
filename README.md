@@ -18,7 +18,7 @@ allprojects {
 }
 ```
 
-Add the dependency
+> Step 2. Add the dependency
 
 ```groovy
 dependencies {
