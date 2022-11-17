@@ -6,7 +6,8 @@ In some application, we need to get someone's attention, and not just by the vie
 
 
 ## Setup
-Add it in your root build.gradle at the end of repositories:
+
+> Step 1. Add it in your root build.gradle at the end of repositories:
 
 ```groovy
 allprojects {
